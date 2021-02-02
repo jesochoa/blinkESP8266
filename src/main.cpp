@@ -3,6 +3,7 @@
 void setup() {
   // LED_BUILTIN
   pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(4,INPUT);
 }
 
 void loop() {
@@ -12,4 +13,8 @@ void loop() {
   //Enciende Led de la placa
   digitalWrite(LED_BUILTIN, HIGH);
   delay(2000);
+  if(digitalRead(4)){
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(2000);
+  }
 }
